@@ -3,16 +3,29 @@ import { baseURL } from ".";
 import { NavigateFunction } from "react-router-dom";
 import { showToast } from "../store/toastSlice";
 import { Dispatch } from "redux";
-import { clearLogin } from "../store/userSlice";
+import { clearLogin, saveUser } from "../store/userSlice";
 
-export default async function login(name: string, email: string, navigate: NavigateFunction) {
+export default async function login(
+  name: string,
+  email: string,
+  dispatch: Dispatch,
+  navigate: NavigateFunction
+) {
   try {
     await axios.post(`${baseURL}/auth/login`, {
       name,
       email,
     }, {
       withCredentials: true
-    }).then(() => navigate('/home')).catch();
+    }).then(() => {
+      dispatch(saveUser({ username: name, email }));
+      dispatch(showToast({
+        title: 'Welcome!',
+        type: 'success',
+        hideTimer: true
+      }));
+      navigate('/home')
+    }).catch();
 
   } catch (error) {
     console.error('Error Searching:  ', error);
@@ -29,6 +42,7 @@ export async function logout(dispatch: Dispatch, navigate: NavigateFunction) {
       dispatch(showToast({
         title: 'Please Come Back Soon!',
         type: 'success',
+        hideTimer: true
       }));
     }).catch();
   } catch (error) {
