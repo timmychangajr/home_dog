@@ -1,0 +1,14 @@
+.default-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--accent-primary);
+  color: var(--text-primary);
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+  font-family: var(--font-display);
+  font-weight: bold;
+}
+
+.default-button:hover {
+  background-color: var(--accent-vivid);
+}

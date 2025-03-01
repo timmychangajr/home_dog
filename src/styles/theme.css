@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900&directory=3&display=swap");
+
+:root {
+  /* Background Colors */
+  --bg-primary: theme('colors.gray.600');
+  --bg-secondary: theme('colors.gray.900');
+  --bg-tertiary: theme('colors.gray.800');
+  --bg-mid: theme('colors.gray.700');
+
+  /* Border Colors */
+  --border-primary: theme('colors.gray.700');
+  --border-accent: theme('colors.teal.800');
+
+  /* Text Colors */
+  --text-primary: theme('colors.gray.200');
+  --text-secondary: theme('colors.gray.300');
+  --text-muted: theme('colors.gray.500');
+  --text-dim: theme('colors.gray.400');
+
+  /* Accent Colors */
+  --accent-primary: theme('colors.teal.600');
+  --accent-primary-hover: theme('colors.teal.700');
+  --accent-light: theme('colors.teal.400');
+  --accent-vivid: theme('colors.orange.500');
+  --accent-bg: theme('colors.teal.900');
+  --match: color-mix(in srgb, var(--accent-light) 30%, transparent);
+  
+  /* Toast */
+  --error: color-mix(in srgb, var(--accent-vivid) 90%, transparent);
+  /* Margin */
+  --margin: 10px;
+  /* All sides */
+  --margin-top: 10px;
+  --margin-right: 10px;
+  --margin-bottom: 10px;
+  --margin-left: 10px;
+
+  /* Padding */
+  --padding: 10px;
+  /* All sides */
+  --padding-top: 10px;
+  --padding-right: 10px;
+  --padding-bottom: 10px;
+  --padding-left: 10px;
+
+  /* Border */
+  --border: 1px solid #000;
+  /* Width, style, color */
+  --border-radius: 5px;
+
+  /* Font */
+  --font-display: "Montserrat", "sans-serif";
+}

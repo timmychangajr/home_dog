@@ -1,0 +1,8 @@
+.chevron {
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.chevron:hover {
+  color: var(--accent-vivid); /* Change this to your desired hover color */
+}
